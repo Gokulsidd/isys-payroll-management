@@ -1,16 +1,23 @@
-import { useParams, usePathname } from "next/navigation";
+'use client'
+import { NavButton } from "@/components/nav-button";
 import { ModeToggle } from "./toggle-theme";
 
 const Navbar = () => {
-
-
+    const DashboardNav = ['My team' , 'My projects', 'My organisation', 'Timecard']
+    const onCLick = (item: string) => {
+        console.log(item)
+        return item
+    }
     return ( 
-        <div className="flex gap-x-6 items-center border w-fit border-secondary rounded-md p-2 mb-4 cursor-pointer shadow-md">
-            <p className="rounded-sm p-1 hover:bg-secondary">nav 1</p>
-            <p className="rounded-sm p-1 hover:bg-secondary">nav 2</p>
-            <p className="rounded-sm p-1 hover:bg-secondary">nav 3</p>
-            <p className="rounded-sm p-1 hover:bg-secondary">nav 4</p>
-            <ModeToggle />
+        <div className="flex gap-x-6 items-center justify-between border  border-secondary rounded-md py-2 px-4 mb-4 cursor-pointer shadow-md">
+            <div>
+            {DashboardNav.map((item) => {
+                return (
+                    <NavButton label={item} onClick={() => onCLick(item)} />
+                )
+            })}
+            </div>
+            {/* <ModeToggle /> */}
         </div>
      );
 }
