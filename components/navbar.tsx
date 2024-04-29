@@ -1,4 +1,8 @@
+import { useParams, usePathname } from "next/navigation";
+
 const Navbar = () => {
+
+
     return ( 
         <div className="flex gap-x-6 border w-fit border-gray-200 rounded-md p-2 mb-4 cursor-pointer shadow-md">
             <p className="rounded-sm p-1 hover:bg-secondary">nav 1</p>

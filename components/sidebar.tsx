@@ -1,9 +1,16 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
+import { cn } from "@/lib/utils";
+import { useParams, usePathname } from "next/navigation";
 
 
 const Sidebar = () => {
+    const pathname = usePathname()
+    const params = useParams()
+
+    
     const routes = [
         {
             label: 'Dashboard',
@@ -37,14 +44,15 @@ const Sidebar = () => {
         },
     ]
     return ( 
-        <nav className="flex flex-col items-center px-4 pt-10 gap-y-10 justify-start h-full border border-r-gray-200">
+        <nav className="flex flex-col items-center px-4 pt-10 gap-y-10 justify-start h-full border border-r-gray-200 shadow-md">
             {routes.map((route) => {
+                const isActive = pathname === route.href
                 return (
-                   <TooltipProvider>
-                    <Tooltip key={route.label} delayDuration={0}>
+                   <TooltipProvider key={route.label}>
+                    <Tooltip  delayDuration={0}>
                     <TooltipTrigger>
                     <Link href={route.href}>
-                        <div className="hover:bg-secondary p-1 rounded-sm">{route.icon}</div>
+                        <div className={`hover:bg-secondary p-1 rounded-sm ${isActive ? 'bg-secondary border border-gray-200' : ''}`}>{route.icon}</div>
                     </Link>
                     </TooltipTrigger>
                     <TooltipContent side="right" className="ml-1.5" >
