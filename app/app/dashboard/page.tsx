@@ -8,7 +8,7 @@ const Dashboard = () => {
             <section className="flex gap-x-4 ">
                 <div className="flex flex-col gap-y-2  w-full ">
                     <h1 className="text-xl font-semibold pl-1">Timecard</h1>
-                    <div className="flex flex-col gap-y-2 p-2 rounded-md border border-gray-200 h-[250px] shadow-md">
+                    <div className="flex flex-col gap-y-2 p-2 rounded-md border border-secondary h-[250px] shadow-md">
                     {/* <div>this is card</div>
                     <div>this is card</div>
                     <div>this is card</div> */}
@@ -16,7 +16,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex flex-col gap-y-2  w-full ">
                     <h1 className="text-xl font-semibold pl-1">Projects</h1>
-                    <div className="flex flex-col gap-y-2 p-2 rounded-md border border-gray-200 h-[250px] shadow-md">
+                    <div className="flex flex-col gap-y-2 p-2 rounded-md border border-secondary h-[250px] shadow-md">
                     {/* <div>this is card</div>
                     <div>this is card</div> */}
                     </div>
@@ -25,15 +25,15 @@ const Dashboard = () => {
             <section className="flex items-center gap-x-4">
                 <div className="w-full flex flex-col gap-y-2  w-full ">
                     <h1 className="text-xl font-semibold pl-1">Progress</h1>
-                    <div className="flex flex-col gap-y-2 h-[250px] w-full p-2 rounded-md border border-gray-200 shadow-md"></div>
+                    <div className="flex flex-col gap-y-2 h-[250px] w-full p-2 rounded-md border border-secondary shadow-md"></div>
                 </div>
                 <div className="w-full flex flex-col gap-y-2  w-full ">
                     <h1 className="text-xl font-semibold pl-1">Calender</h1>
-                    <div className="flex flex-col gap-y-2 h-[250px] w-full p-2 rounded-md border border-gray-200 shadow-md"></div>
+                    <div className="flex flex-col gap-y-2 h-[250px] w-full p-2 rounded-md border border-secondary shadow-md"></div>
                 </div>
                 <div className="w-full flex flex-col gap-y-2  w-full ">
                     <h1 className="text-xl font-semibold pl-1">Holidays</h1>
-                    <div className="flex flex-col gap-y-2 h-[250px] w-full p-2 rounded-md border border-gray-200 shadow-md"></div>
+                    <div className="flex flex-col gap-y-2 h-[250px] w-full p-2 rounded-md border border-secondary shadow-md"></div>
                 </div>
             </section>
             </div>
