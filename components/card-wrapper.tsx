@@ -20,11 +20,11 @@ export const DashboardCardWrapper = ({
 } : cardWrapperProps) => {
     return (
         <Card className="min-h-[400px]  shadow-main rounded-[6px] p-2 border border-secondary bg-[#fefefe]">
-            <div className="flex w-full items-center justify-start lg:gap-x-60">
+            <div className="flex w-full items-center justify-between">
             <CardHeader>
                 <DashboardCardHeader label={header} subHeader={subHeader}/>
             </CardHeader>
-            <div className="pr-2">{dropDown}</div>
+            <div className="pr-8">{dropDown}</div>
             </div>
             <CardContent>{children}</CardContent>
         </Card>
