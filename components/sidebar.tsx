@@ -1,16 +1,13 @@
-"use client"
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
-import { cn } from "@/lib/utils";
 import { useParams, usePathname } from "next/navigation";
 
-
 const Sidebar = () => {
-    const pathname = usePathname()
-    const params = useParams()
+    const pathname = usePathname();
+    const params = useParams();
 
-    
     const routes = [
         {
             label: 'Dashboard',
@@ -42,25 +39,29 @@ const Sidebar = () => {
             href: '/app/reports',
             icon: <Image src={'/reports.png'} height={25} width={25} alt="dashboard"/>
         },
-    ]
+    ];
+
     return ( 
-        <nav className="flex flex-col items-center px-4 pt-10 gap-y-10 justify-start h-full border border-r-secondary shadow-md ">
+        <nav className="flex flex-col items-center sm:items-start px-4 pt-24 gap-y-4 sm:justify-start h-full w-[250px] border border-r-secondary shadow-xl bg-[#fefefe]">
             {routes.map((route) => {
-                const isActive = pathname === route.href
+                const isActive = pathname === route.href;
                 return (
-                   <TooltipProvider key={route.label}>
-                    <Tooltip  delayDuration={0}>
-                    <TooltipTrigger>
-                    <Link href={route.href}>
-                        <div className={`hover:bg-secondary dark:bg-slate-50 dark:hover:bg-white  p-1 rounded-sm ${isActive ? 'bg-secondary border dark:bg-slate-50 border-primary' : ''}`}>{route.icon}</div>
-                    </Link>
-                    </TooltipTrigger>
-                    <TooltipContent side="right" className="ml-1.5" >
-                        {route.label}
-                    </TooltipContent>
-                   </Tooltip>
-                   </TooltipProvider>
-                )
+                    // <TooltipProvider key={route.label}>
+                    //     <Tooltip delayDuration={0}>
+                    //         <TooltipTrigger>
+                                <Link href={route.href}>
+                                    <div className={`flex min-w-[200px] gap-x-4 items-center  justify-start hover:bg-secondary dark:bg-slate-50 dark:hover:bg-white p-4 rounded-sm ${isActive ? 'bg-secondary border dark:bg-slate-50 border-inherit' : ''}`}>
+                                        {route.icon}
+                                        <span className="ml-2 sm:ml-0 font-semibold">{route.label}</span>
+                                    </div>
+                                </Link>
+                    //         </TooltipTrigger>
+                    //         <TooltipContent side="right" className="ml-1.5">
+                    //             {route.label}
+                    //         </TooltipContent>
+                    //     </Tooltip>
+                    // </TooltipProvider>
+                );
             })}
         </nav>
      );

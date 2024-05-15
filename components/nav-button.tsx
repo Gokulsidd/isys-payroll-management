@@ -11,6 +11,8 @@ export const NavButton = ({
     onClick
  }: NavButtonprops) => {
     return (
-        <Button variant={'ghost'} size={'sm'} onClick={onClick}>{label}</Button>
+            <Button variant={"default"}  size={"lg"} onClick={onClick}>
+                <p className="font-normal">{label}</p>
+            </Button>
     )
  }

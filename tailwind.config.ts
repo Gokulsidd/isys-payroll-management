@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      boxShadow: {
+        'main': '0px 0px 10px 1px rgba(0, 0, 0, 0.1)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
