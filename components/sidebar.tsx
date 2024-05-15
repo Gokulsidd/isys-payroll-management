@@ -49,7 +49,7 @@ const Sidebar = () => {
                     // <TooltipProvider key={route.label}>
                     //     <Tooltip delayDuration={0}>
                     //         <TooltipTrigger>
-                                <Link href={route.href}>
+                                <Link href={route.href} key={route.label}>
                                     <div className={`flex min-w-[200px] gap-x-4 items-center  justify-start hover:bg-secondary dark:bg-slate-50 dark:hover:bg-white p-4 rounded-sm ${isActive ? 'bg-secondary border dark:bg-slate-50 border-inherit' : ''}`}>
                                         {route.icon}
                                         <span className="ml-2 sm:ml-0 font-semibold">{route.label}</span>

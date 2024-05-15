@@ -111,7 +111,7 @@ const DashboardProjectCard = ({
             <CardContent className="flex flex-col gap-y-3">
                 {selectedProject.team.map((member) => {
                     return (
-                        <div className="flex gap-x-4">
+                        <div className="flex gap-x-4" key={member.id}>
                             <p className="w-[42px] h-[42px] rounded-full bg-gray-300 shadow-xl" ></p>
                             <div className="flex flex-col items-start">
                                 <p className="font-medium text-[18px]">{member.name}</p>
