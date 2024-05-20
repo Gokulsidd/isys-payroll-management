@@ -32,7 +32,7 @@ const Projects = () => {
             <div className="flex flex-wrap gap-3 items-start justify-start">
                 {projects.map((project) => {
                     return (
-                        <ProjectCard {...project} />
+                        <ProjectCard {...project} key={project.id} />
                     )
                 })}
             </div>
