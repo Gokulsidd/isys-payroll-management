@@ -9,26 +9,32 @@ const Font = Poppins({
 import { UserButton } from "@/components/user-button";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import projects from "@/lib/constants";
+import ProjectCard from "@/components/projects/project-card";
 
 const Projects = () => {
     return ( 
-        <div className="p-2">
-            <div className="flex items-center justify-end">
-                <UserButton name="gokulRamakrishnan" />
-            </div>
-            <div className="flex flex-row gap-x-6 items-center justify-between">
-                <div className="flex flex-col md:flex-row  gap-x-4  md:items-end">
+        <div className="p-4 space-y-6">
+            <div className="flex flex-col gap-y-4 sm:flex-row lg:gap-x-6 gap-x-4 sm:items-center items-start justify-between">
+                <div className="flex flex-row  gap-x-4  items-center">
                     <h1 className={cn("text-[28px] leading-[32px] font-bold" , Font.className)}>Projects</h1>
-                    <p className="text-muted-foreground">{`( ${'8'} )`}</p>
+                    <p className="text-muted-foreground sm:w-[40px]">{`( ${'8'} )`}</p>
                 </div>
-                <div className="flex flex-col md:flex-row gap-x-4">
-                    <Input  type="text" placeholder="search"/>
-                    <Button variant={'ghost'} size={'icon'} >Y</Button>
+                <div className="flex flex-col md:flex-row gap-x-4 w-full">
+                    <Input  type="text" placeholder="search" className="w-full sm:w-auto lg:w-[400px]" />
+                    <Button variant={'outline'} size={'icon'} className="md:flex hidden" >
+                        <Image src={'/filter-2.png'} width={24} height={24} alt="filter" />
+                    </Button>
                 </div>
-            <div className="flex flex-col md:flex-row gap-x-4">
-                    <Input  type="text" placeholder="search"/>
-                    <Button variant={'ghost'} size={'icon'} >Y</Button>
+             <Button variant={"outline"} size={'lg'} className="outline-[#1DCE00] text-[#1DCE00] w-full sm:w-[150px]  lg:w-[200px]">Add Project</Button>
             </div>
+            <div className="flex flex-wrap gap-3 items-start justify-start">
+                {projects.map((project) => {
+                    return (
+                        <ProjectCard {...project} />
+                    )
+                })}
             </div>
         </div>
      );

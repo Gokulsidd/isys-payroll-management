@@ -3,8 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 import { useParams, usePathname } from "next/navigation";
+import { UserButton } from "./user-button";
+import { useRef } from "react";
 
-const Sidebar = () => {
+interface sidebarProps {
+    handleSideBar: () => void
+}
+
+
+const Sidebar = ({handleSideBar} : sidebarProps) => {
     const pathname = usePathname();
     const params = useParams();
 
@@ -41,15 +48,17 @@ const Sidebar = () => {
         },
     ];
 
+
     return ( 
-        <nav className="flex flex-col items-center sm:items-start px-4 pt-24 gap-y-4 sm:justify-start h-full w-[250px] border border-r-secondary shadow-xl bg-[#fefefe]">
+       <div className="flex flex-col items-center sm:items-start px-4 pt-24 pb-6 gap-y-4 sm:justify-between h-full w-[250px] border border-r-secondary shadow-xl bg-[#fefefe]">
+         <nav className="flex flex-col gap-y-4">
             {routes.map((route) => {
                 const isActive = pathname === route.href;
                 return (
                     // <TooltipProvider key={route.label}>
                     //     <Tooltip delayDuration={0}>
                     //         <TooltipTrigger>
-                                <Link href={route.href} key={route.label}>
+                                <Link href={route.href} key={route.label} onClick={handleSideBar}>
                                     <div className={`flex min-w-[200px] gap-x-4 items-center  justify-start hover:bg-secondary dark:bg-slate-50 dark:hover:bg-white p-4 rounded-sm ${isActive ? 'bg-secondary border dark:bg-slate-50 border-inherit' : ''}`}>
                                         {route.icon}
                                         <span className="ml-2 sm:ml-0 font-semibold">{route.label}</span>
@@ -64,6 +73,8 @@ const Sidebar = () => {
                 );
             })}
         </nav>
+        <UserButton name="gokulramakrishnan"  />
+       </div>
      );
 }
  
