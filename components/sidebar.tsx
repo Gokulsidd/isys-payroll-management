@@ -73,7 +73,9 @@ const Sidebar = ({handleSideBar} : sidebarProps) => {
                 );
             })}
         </nav>
+        <div className="block">
         <UserButton name="gokulramakrishnan"  />
+        </div>
        </div>
      );
 }

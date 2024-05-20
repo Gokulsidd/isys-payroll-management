@@ -19,8 +19,8 @@ interface userButtonProps {
 
 export const UserButton = ({ imageLink, name }: userButtonProps) => {
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger className="border border-gray-200 w-[200px]  rounded-[6px]">
+    <DropdownMenu >
+      <DropdownMenuTrigger className="border border-gray-200 w-[200px] rounded-[6px]">
         <div className="lg:flex gap-x-1 items-center justify-around py-2 px-4 rounded-[8px] hidden bg-[#fefefe]">
           <p className="font-semibold text-[18px] text-[#444444] max-w-[100px] overflow-hidden whitespace-nowrap text-ellipsis">
             {name}

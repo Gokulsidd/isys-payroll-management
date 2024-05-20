@@ -27,7 +27,9 @@ const Dashboard = () => {
     <div className="p-2">
       <div className="w-full flex justify-between items-center mb-4 ">
         <Navbar />
+        <div className="lg:block hidden">
         <UserButton name="gokulramakrishnan" />
+        </div>
       </div>
       <div className="grid  xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4">
         <DashboardCardWrapper header="TimeSheet" subHeader="last 3 months">

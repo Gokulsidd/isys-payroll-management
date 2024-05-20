@@ -45,7 +45,7 @@ const DashboardProjectCard = ({
   return (
     <DashboardCardWrapper
       header="Projects"
-      subHeader={`${projects.length} Projects `}
+      subHeader={`${projects.length} `}
       dropDown={<DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline">
@@ -68,7 +68,7 @@ const DashboardProjectCard = ({
     >
       {selectedProject && (
         <div className="flex flex-col md:flex-row gap-6">
-          <Card className="border border-[#dfdfdf] rounded-[8px] lg:w-[340px] min-h-[324px] ">
+          <Card className="border border-[#dfdfdf] rounded-[8px] lg:w-[340px]  min-h-[324px] ">
             <CardHeader>
               <div className="w-full flex flex-col">
                 <p
@@ -112,7 +112,7 @@ const DashboardProjectCard = ({
                 {selectedProject.team.map((member) => {
                     return (
                         <div className="flex gap-x-4" key={member.id}>
-                            <p className="w-[42px] h-[42px] rounded-full bg-gray-300 shadow-xl" ></p>
+                            <p className="hidden sm:block w-[42px] h-[42px] rounded-full bg-gray-300 shadow-xl" ></p>
                             <div className="flex flex-col items-start">
                                 <p className="font-medium text-[18px]">{member.name}</p>
                                 <p className="font-medium text-[14px] text-muted-foreground w-[150px] overflow-x-hidden whitespace-nowrap text-ellipsis">{member.role}</p>
@@ -121,7 +121,6 @@ const DashboardProjectCard = ({
                     )
                 })}
             </CardContent>
-            <CardFooter></CardFooter>
           </Card>
         </div>
       )}
