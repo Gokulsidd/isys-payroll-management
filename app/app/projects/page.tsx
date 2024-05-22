@@ -1,6 +1,6 @@
 'use client'
 
-import { cn, searchResults } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { Poppins } from "next/font/google";
 
 const Font = Poppins({
@@ -19,11 +19,10 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem,
 const Projects = () => {
     const [searchText, setSearchText] =  useState('')
     const [searchedProjects, setSearchedProjects] = useState(projects)
-    const projectsNames = projects.map((item) => item.name.toLowerCase())
 
     const handleSearchTextChange = (e : any) => {
         setSearchText(e.target.value)
-        setSearchedProjects(projects.filter((item) => searchResults(e.target.value,projectsNames).includes(item.name.toLowerCase())))
+        setSearchedProjects(projects.filter((item) => item.name.toLowerCase().includes(e.target.value.toLowerCase())))
     } 
 
     const handleSortSelect = (label: string) => {
