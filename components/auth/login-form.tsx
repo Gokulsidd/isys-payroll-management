@@ -60,7 +60,7 @@ const LoginForm = () => {
                     </div>
                     <FormError  message=""/>
                     <FormSuccess message="" />
-                    <Button type='submit' className='sm:w-full' disabled={isPending} >
+                    <Button type='submit' className='w-full' disabled={isPending} >
                         Login
                     </Button>
                 </form>
