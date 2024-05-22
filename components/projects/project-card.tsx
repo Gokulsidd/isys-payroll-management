@@ -4,11 +4,9 @@ import { Poppins } from "next/font/google";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { Button } from "../ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { StatusLabel } from "@/components/projects/status-label";
 import Image from "next/image";
@@ -47,9 +45,8 @@ const ProjectCard = ({
           </p>
           <StatusLabel label={status}  />
         </div>
-        <Button variant={'ghost'} size={'icon'} className="outline-none focus:outline-none rounded-full">
         <DropdownMenu>
-            <DropdownMenuTrigger>
+            <DropdownMenuTrigger className="outline-none focus:outline-none hover:bg-gray-100 rounded-full h-fit"> 
                 <Image src={'/menu-vertical.png'} width={28} height={28} alt="option" />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -61,7 +58,6 @@ const ProjectCard = ({
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
-        </Button>
       </CardHeader>
       <CardContent>
         <div className="w-full flex flex-col   ">

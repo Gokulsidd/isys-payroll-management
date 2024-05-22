@@ -3,14 +3,6 @@ import { DashboardCardWrapper } from "@/components/card-wrapper";
 import DashboardProjectsCard  from "@/components/dashboard/projects-card";
 import Navbar from "@/components/navbar";
 import { TimeSheetCard } from "@/components/timesheet-card";
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { UserButton } from "@/components/user-button";
 import projects from "@/lib/constants";
 import { useState } from "react";

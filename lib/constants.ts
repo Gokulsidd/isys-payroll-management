@@ -130,6 +130,9 @@ export const projects = [
       ]
     }
   ];
+
+
+  export const sortLabels : string[] = ['In Progress', 'Completed', 'On Hold', 'All']
   
   export default projects;
   
