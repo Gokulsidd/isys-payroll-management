@@ -68,7 +68,7 @@ const DashboardProjectCard = ({
     >
       {selectedProject && (
         <div className="flex flex-col md:flex-row gap-6">
-          <Card className="border border-[#dfdfdf] rounded-[8px] lg:w-[340px]  min-h-[324px] ">
+          <Card className="border border-[#dfdfdf] rounded-[8px]  min-h-[324px] ">
             <CardHeader>
               <div className="w-full flex flex-col">
                 <p
@@ -100,7 +100,7 @@ const DashboardProjectCard = ({
                 <p className="font-medium text-muted-foreground">{selectedProject.started}</p>
             </CardFooter>
           </Card>
-          <Card className="border border-[#dfdfdf] rounded-[8px] max-w-[340px]  min-h-[324px] ">
+          <Card className="border border-[#dfdfdf] rounded-[8px]   min-h-[324px] ">
             <CardHeader className="w-full flex flex-row items-center justify-between">
                 <p className={cn(
                     "text-[22px] leading-[32px] font-bold",
@@ -115,7 +115,7 @@ const DashboardProjectCard = ({
                             <p className="hidden sm:block w-[42px] h-[42px] rounded-full bg-gray-300 shadow-xl" ></p>
                             <div className="flex flex-col items-start">
                                 <p className="font-medium text-[18px]">{member.name}</p>
-                                <p className="font-medium text-[14px] text-muted-foreground w-[150px] overflow-x-hidden whitespace-nowrap text-ellipsis">{member.role}</p>
+                                <p className="font-medium text-[14px] text-muted-foreground md:w-[150px] overflow-x-hidden whitespace-nowrap text-ellipsis">{member.role}</p>
                             </div>
                         </div>
                     )

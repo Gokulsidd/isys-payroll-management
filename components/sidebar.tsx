@@ -50,7 +50,7 @@ const Sidebar = ({handleSideBar} : sidebarProps) => {
 
 
     return ( 
-       <div className="flex flex-col items-center sm:items-start px-4 pt-24 pb-6 gap-y-4 sm:justify-between h-full w-[250px] border border-r-secondary shadow-xl bg-[#fefefe]">
+       <div className="flex flex-col items-start sm:items-start px-6 sm:px-4 pt-24 pb-6 gap-y-4 sm:justify-between h-full w-[100vw] sm:w-[250px] border border-r-secondary shadow-xl bg-[#fefefe]">
          <nav className="flex flex-col gap-y-4">
             {routes.map((route) => {
                 const isActive = pathname === route.href;

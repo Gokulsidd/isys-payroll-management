@@ -12,8 +12,9 @@ const Layout = ({ children } : { children : React.ReactNode }) => {
 
   return (
     <div className="flex h-full">
+      <div className='h-[80px] w-full fixed top-0 sm:hidden border border-gray-100    bg-white/75'></div>
       {/* Hamburger Menu */}
-      <div className="fixed top-6 left-4 z-50 cursor-pointer bg-[#fefefe]" onClick={toggleSidebar}>
+      <div className="fixed top-6 left-8 sm:left-4 z-50 cursor-pointer bg-[#fefefe]" onClick={toggleSidebar}>
         <svg className="w-10 h-10 p-1 hover:shadow-main hover:border-inherit border text-black rounded-[6px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path fill="currentColor" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
         </svg>
@@ -25,7 +26,7 @@ const Layout = ({ children } : { children : React.ReactNode }) => {
       </div>
 
       {/* Main Content */}
-      <div className="p-2 px-4 w-full h-[100vh] overflow-y-scroll ml-12">{children}</div>
+      <div className="p-2 px-4 w-full h-[100vh] overflow-y-scroll mt-16 sm:mt-0 sm:ml-12">{children}</div>
     </div>
   );
 };

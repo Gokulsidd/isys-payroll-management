@@ -16,14 +16,14 @@ const Dashboard = () => {
 
 
   return (
-    <div className="p-2">
+    <div className="p-4">
       <div className="w-full flex justify-between items-center mb-4 ">
         <Navbar />
         <div className="lg:block hidden">
         <UserButton name="gokulramakrishnan" />
         </div>
       </div>
-      <div className="grid  xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4">
+      <div className="grid grid-flow-row lg:grid-cols-2 sm:grid-cols-1 gap-4">
         <DashboardCardWrapper header="TimeSheet" subHeader="last 3 months">
           <div className="flex flex-col gap-y-2">
           <TimeSheetCard name="Isys_jan_2014" status="Approved" />

@@ -32,12 +32,12 @@ const ProjectCard = ({
   started,
 }: ProjectCardProps) => {
   return (
-    <Card className="border border-[#dfdfdf] rounded-[8px]  w-[300px] md:w-[340px] lg:min-h-[324px] shadow-main">
+    <Card className="border border-[#dfdfdf] rounded-[8px]  w-full  shadow-main">
       <CardHeader className="flex justify-between flex-row">
         <div className="w-full flex flex-col">
           <p
             className={cn(
-              "text-[22px] leading-[32px] font-bold",
+              "text-[1.2rem] leading-[32px] font-bold w-[200px] overflow-x-hidden whitespace-nowrap text-ellipsis",
               Font.className
             )}
           >

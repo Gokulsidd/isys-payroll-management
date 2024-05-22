@@ -60,7 +60,7 @@ const Projects = () => {
                 </div>
              <Button variant={"outline"} size={'lg'} className="outline-[#1DCE00] text-[#1DCE00] w-full sm:w-[150px]  lg:w-[200px]">Add Project</Button>
             </div>
-            <div className="flex flex-wrap gap-3 items-start justify-start">
+            <div className="flex flex-wrap gap-3 items-start justify-start sm:grid grid-flow-row sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
                 {searchedProjects.map((project) => {
                     return (
                         <ProjectCard {...project} key={project.id} />

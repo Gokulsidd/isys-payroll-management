@@ -19,7 +19,7 @@ export const DashboardCardWrapper = ({
     dropDown
 } : cardWrapperProps) => {
     return (
-        <Card className="w-[300px] sm:w-full min-h-[400px]  shadow-main rounded-[6px] p-2 border border-secondary bg-[#fefefe]">
+        <Card className="w-full min-h-[400px]  shadow-main rounded-[6px] p-2 border border-secondary bg-[#fefefe]">
             <div className="flex w-full items-center justify-between">
             <CardHeader>
                 <DashboardCardHeader label={header} subHeader={subHeader}/>
