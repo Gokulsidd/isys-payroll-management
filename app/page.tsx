@@ -3,6 +3,7 @@ import { ModeToggle } from "@/components/toggle-theme";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Poppins } from "next/font/google";
+import LoginPage from "./auth/login/page";
 
 const font = Poppins({
   subsets: ['latin'],
@@ -11,16 +12,8 @@ const font = Poppins({
 
 export default function Home() {
   return (
-    <main className="flex h-full flex-col p-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
-      <div className={cn(font.className, 'flex  flex-col items-center justify-center h-full space-y-16')}>
-        <div className="text-center space-y-6">
-          <h1 className="text-6xl font-semibold drop-shadow-md text-slate-50 ">Isys-timex</h1>
-          <p className='text-lg text-slate-50'>Login to continue</p>
-        <LoginButton>
-          <Button variant={"secondary"} size='lg'>Login</Button>
-        </LoginButton>
-        </div>
-      </div>
-    </main>
+    <div className="flex h-full justify-center items-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500 to-[#0C1029]">
+      <LoginPage />
+    </div>
   );
 }

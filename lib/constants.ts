@@ -1,138 +1,266 @@
 export const projects = [
-    { 
-      id: '1',
-      name: "Project Alpha",
-      summary: "A mobile application for e-commerce.",
-      status: "In Progress",
-      client: "Client A",
-      started: "2023-01-15",
-      team: [
-        { id:'1', name: "Alice Johnson", role: "Project Manager" },
-        { id:'2', name: "Bob Smith", role: "Lead Developer" },
-        { id:'3', name: "Charlie Brown", role: "UI/UX Designer" }
-      ]
-    },
-    {
-      id: '2',
-      name: "Project Beta",
-      summary: "A web portal for online education.",
-      status: "Completed",
-      client: "Client B",
-      started: "2022-06-10",
-      team: [
-        { id:'1', name: "David Wilson", role: "Project Manager" },
-        { id:'2', name: "Eva Davis", role: "Full Stack Developer" },
-        { id:'3', name: "Frank White", role: "Content Specialist" }
-      ]
-    },
-    {
-      id: '3',
-      name: "Project Gamma",
-      summary: "An AI-powered chatbot for customer service.",
-      status: "On Hold",
-      client: "Client C",
-      started: "2023-03-01",
-      team: [
-        { id:'1', name: "Grace Lee", role: "AI Specialist" },
-        { id:'2', name: "Hank Miller", role: "Backend Developer" },
-        { id:'3', name: "Ivy Thomas", role: "Data Scientist" }
-      ]
-    },
-    {
-      id: '4',
-      name: "Project Delta",
-      summary: "A financial analytics dashboard.",
-      status: "In Progress",
-      client: "Client D",
-      started: "2022-11-20",
-      team: [
-        { id:'1', name: "Jack Martin", role: "Project Manager" },
-        { id:'2', name: "Karen Garcia", role: "Data Analyst" },
-        { id:'3', name: "Liam Martinez", role: "Frontend Developer" }
-      ]
-    },
-    {
-      id:'5',
-      name: "Project Epsilon",
-      summary: "A social media integration tool.",
-      status: "Completed",
-      client: "Client E",
-      started: "2021-09-05",
-      team: [
-        { id:'1', name: "Mike Rodriguez", role: "Project Manager" },
-        { id:'2', name: "Nina Walker", role: "Backend Developer" },
-        { id:'3', name: "Oscar Young", role: "Full Stack Developer" }
-      ]
-    },
-    { 
-      id:'6',
-      name: "Project Zeta",
-      summary: "A machine learning model for predictive analysis.",
-      status: "In Progress",
-      client: "Client F",
-      started: "2023-04-18",
-      team: [
-        { id:'1', name: "Paul Harris", role: "Data Scientist" },
-        { id:'2', name: "Quincy Clark", role: "Machine Learning Engineer" },
-        { id:'3', name: "Rachel Lewis", role: "Research Analyst" }
-      ]
-    },
-    {
-      id:'7',   
-      name: "Project Eta",
-      summary: "An IoT solution for smart homes.",
-      status: "On Hold",
-      client: "Client G",
-      started: "2022-12-12",
-      team: [
-        { id:'1', name: "Sam Robinson", role: "IoT Engineer" },
-        { id:'2', name: "Tina Martinez", role: "Embedded Systems Developer" },
-        { id:'3', name: "Ulysses Wright", role: "Security Specialist" }
-      ]
-    },
-    {
-      id:'8',
-      name: "Project Theta",
-      summary: "A blockchain-based supply chain management system.A blockchain-based supply chain management system.A blockchain-based supply chain management system.A blockchain-based supply chain management system.",
-      status: "In Progress",
-      client: "Client H",
-      started: "2023-02-25",
-      team: [
-        { id:'1', name: "Victoria Hall", role: "Blockchain Developer" },
-        { id:'2', name: "William Scott", role: "Smart Contract Developer" },
-        { id:'3', name: "Xander Carter", role: "Project Manager" }
-      ]
-    },
-    {
-      id:'9',
-      name: "Project Iota",
-      summary: "A CRM system for small businesses.",
-      status: "Completed",
-      client: "Client I",
-      started: "2022-03-22",
-      team: [
-        { id:'1', name: "Yvonne Phillips", role: "CRM Specialist" },
-        { id:'2', name: "Zachary Bell", role: "Backend Developer" },
-        { id:'3', name: "Aaron Collins", role: "Frontend Developer" }
-      ]
-    },
-    {
-      id:'10',
-      name: "Project Kappa",
-      summary: "A mobile game development project.",
-      status: "In Progress",
-      client: "Client J",
-      started: "2023-05-01",
-      team: [
-        { id:'1', name: "Bella Turner", role: "Game Designer" },
-        { id:'2', name: "Caleb Ross", role: "Unity Developer" },
-        { id:'3', name: "Diana Perez", role: "Graphic Artist" }
-      ]
-    }
-  ];
+  {
+    id: "1",
+    name: "Project Alpha",
+    summary: "A mobile application for e-commerce.",
+    status: "In Progress",
+    client: "Client A",
+    started: "2023-01-15",
+    team: [
+      { id: "1", name: "Alice Johnson", role: "Project Manager" },
+      { id: "2", name: "Bob Smith", role: "Lead Developer" },
+      { id: "3", name: "Charlie Brown", role: "UI/UX Designer" },
+    ],
+  },
+  {
+    id: "2",
+    name: "Project Beta",
+    summary: "A web portal for online education.",
+    status: "Completed",
+    client: "Client B",
+    started: "2022-06-10",
+    team: [
+      { id: "1", name: "David Wilson", role: "Project Manager" },
+      { id: "2", name: "Eva Davis", role: "Full Stack Developer" },
+      { id: "3", name: "Frank White", role: "Content Specialist" },
+    ],
+  },
+  {
+    id: "3",
+    name: "Project Gamma",
+    summary: "An AI-powered chatbot for customer service.",
+    status: "On Hold",
+    client: "Client C",
+    started: "2023-03-01",
+    team: [
+      { id: "1", name: "Grace Lee", role: "AI Specialist" },
+      { id: "2", name: "Hank Miller", role: "Backend Developer" },
+      { id: "3", name: "Ivy Thomas", role: "Data Scientist" },
+    ],
+  },
+  {
+    id: "4",
+    name: "Project Delta",
+    summary: "A financial analytics dashboard.",
+    status: "In Progress",
+    client: "Client D",
+    started: "2022-11-20",
+    team: [
+      { id: "1", name: "Jack Martin", role: "Project Manager" },
+      { id: "2", name: "Karen Garcia", role: "Data Analyst" },
+      { id: "3", name: "Liam Martinez", role: "Frontend Developer" },
+    ],
+  },
+  {
+    id: "5",
+    name: "Project Epsilon",
+    summary: "A social media integration tool.",
+    status: "Completed",
+    client: "Client E",
+    started: "2021-09-05",
+    team: [
+      { id: "1", name: "Mike Rodriguez", role: "Project Manager" },
+      { id: "2", name: "Nina Walker", role: "Backend Developer" },
+      { id: "3", name: "Oscar Young", role: "Full Stack Developer" },
+    ],
+  },
+  {
+    id: "6",
+    name: "Project Zeta",
+    summary: "A machine learning model for predictive analysis.",
+    status: "In Progress",
+    client: "Client F",
+    started: "2023-04-18",
+    team: [
+      { id: "1", name: "Paul Harris", role: "Data Scientist" },
+      { id: "2", name: "Quincy Clark", role: "Machine Learning Engineer" },
+      { id: "3", name: "Rachel Lewis", role: "Research Analyst" },
+    ],
+  },
+  {
+    id: "7",
+    name: "Project Eta",
+    summary: "An IoT solution for smart homes.",
+    status: "On Hold",
+    client: "Client G",
+    started: "2022-12-12",
+    team: [
+      { id: "1", name: "Sam Robinson", role: "IoT Engineer" },
+      { id: "2", name: "Tina Martinez", role: "Embedded Systems Developer" },
+      { id: "3", name: "Ulysses Wright", role: "Security Specialist" },
+    ],
+  },
+  {
+    id: "8",
+    name: "Project Theta",
+    summary:
+      "A blockchain-based supply chain management system.A blockchain-based supply chain management system.A blockchain-based supply chain management system.A blockchain-based supply chain management system.",
+    status: "In Progress",
+    client: "Client H",
+    started: "2023-02-25",
+    team: [
+      { id: "1", name: "Victoria Hall", role: "Blockchain Developer" },
+      { id: "2", name: "William Scott", role: "Smart Contract Developer" },
+      { id: "3", name: "Xander Carter", role: "Project Manager" },
+    ],
+  },
+  {
+    id: "9",
+    name: "Project Iota",
+    summary: "A CRM system for small businesses.",
+    status: "Completed",
+    client: "Client I",
+    started: "2022-03-22",
+    team: [
+      { id: "1", name: "Yvonne Phillips", role: "CRM Specialist" },
+      { id: "2", name: "Zachary Bell", role: "Backend Developer" },
+      { id: "3", name: "Aaron Collins", role: "Frontend Developer" },
+    ],
+  },
+  {
+    id: "10",
+    name: "Project Kappa",
+    summary: "A mobile game development project.",
+    status: "In Progress",
+    client: "Client J",
+    started: "2023-05-01",
+    team: [
+      { id: "1", name: "Bella Turner", role: "Game Designer" },
+      { id: "2", name: "Caleb Ross", role: "Unity Developer" },
+      { id: "3", name: "Diana Perez", role: "Graphic Artist" },
+    ],
+  },
+];
+
+export const employees = [
+  {
+    employeeID: "EMP001",
+    name: "John Doe",
+    role: "Software Engineer",
+    dateHired: "2020-01-15",
+    status: "Active",
+    department: "Development",
+    email: "john.doe@example.com",
+    pnumber: "+1234567890",
+    projectsWorkingOn: ["Project Alpha", "Project Beta"],
+    location: "New York",
+  },
+  {
+    employeeID: "EMP002",
+    name: "Jane Smith",
+    role: "Product Manager",
+    dateHired: "2019-03-22",
+    status: "Offline",
+    department: "Product",
+    email: "jane.smith@example.com",
+    pnumber: "+1234567891",
+    projectsWorkingOn: ["Project Gamma"],
+    location: "San Francisco",
+  },
+  {
+    employeeID: "EMP003",
+    name: "Alice Johnson",
+    role: "UX Designer",
+    dateHired: "2021-06-10",
+    status: "Active",
+    department: "Design",
+    email: "alice.johnson@example.com",
+    pnumber: "+1234567892",
+    projectsWorkingOn: ["Project Delta", "Project Epsilon"],
+    location: "Boston",
+  },
+  {
+    employeeID: "EMP004",
+    name: "Bob Lee",
+    role: "DevOps Engineer",
+    dateHired: "2018-09-18",
+    status: "Offline",
+    department: "Operations",
+    email: "bob.lee@example.com",
+    pnumber: "+1234567893",
+    projectsWorkingOn: ["Project Zeta"],
+    location: "Chicago",
+  },
+  {
+    employeeID: "EMP005",
+    name: "Clara King",
+    role: "Quality Assurance Engineer",
+    dateHired: "2017-12-05",
+    status: "Active",
+    department: "Quality Assurance",
+    email: "clara.king@example.com",
+    pnumber: "+1234567894",
+    projectsWorkingOn: ["Project Eta", "Project Theta"],
+    location: "Seattle",
+  },
+  {
+    employeeID: "EMP006",
+    name: "Daniel Green",
+    role: "Data Scientist",
+    dateHired: "2022-01-08",
+    status: "Active",
+    department: "Data Science",
+    email: "daniel.green@example.com",
+    pnumber: "+1234567895",
+    projectsWorkingOn: ["Project Iota"],
+    location: "Austin",
+  },
+  {
+    employeeID: "EMP007",
+    name: "Ella Martinez",
+    role: "Business Analyst",
+    dateHired: "2020-07-20",
+    status: "Active",
+    department: "Business Analysis",
+    email: "ella.martinez@example.com",
+    pnumber: "+1234567896",
+    projectsWorkingOn: ["Project Kappa", "Project Lambda"],
+    location: "Denver",
+  },
+  {
+    employeeID: "EMP008",
+    name: "Frank Wilson",
+    role: "Network Administrator",
+    dateHired: "2016-11-03",
+    status: "Active",
+    department: "IT Infrastructure",
+    email: "frank.wilson@example.com",
+    pnumber: "+1234567897",
+    projectsWorkingOn: ["Project Mu"],
+    location: "Los Angeles",
+  },
+  {
+    employeeID: "EMP009",
+    name: "Grace Lee",
+    role: "Marketing Specialist",
+    dateHired: "2018-05-14",
+    status: "Active",
+    department: "Marketing",
+    email: "grace.lee@example.com",
+    pnumber: "+1234567898",
+    projectsWorkingOn: ["Project Nu", "Project Xi"],
+    location: "Miami",
+  },
+  {
+    employeeID: "EMP010",
+    name: "Hank Brown",
+    role: "Technical Support Engineer",
+    dateHired: "2019-08-30",
+    status: "Active",
+    department: "Technical Support",
+    email: "hank.brown@example.com",
+    pnumber: "+1234567899",
+    projectsWorkingOn: ["Project Omicron"],
+    location: "Atlanta",
+  },
+];
 
 
-  export const sortLabels : string[] = ['In Progress', 'Completed', 'On Hold', 'All']
-  
-  export default projects;
-  
+export const sortLabels: string[] = [
+  "In Progress",
+  "Completed",
+  "On Hold",
+  "All",
+];
+
+export default projects;
