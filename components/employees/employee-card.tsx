@@ -43,7 +43,7 @@ const EmployeeCard = ({
   location,
 }: EmployeeProps) => {
   return (
-    <Card className="border border-[#dfdfdf] rounded-[8px]  w-full  shadow-main p-4">
+    <Card className="border border-[#dfdfdf] rounded-[8px]  w-full space-y-1  shadow-main p-4">
       <div className="flex flex-row gap-x-2 justify-end items-center">
         <StatusLabel label={status} />
         <DropdownMenu>
@@ -68,22 +68,22 @@ const EmployeeCard = ({
         <p className={cn("text-[16px] font-bold",Font.className)}>
             {name}
           </p>
-        <p className="text-muted-foreground text-ellipsis whitespace-wrap overflow-hidden h-[20px]">
+        <p className="text-muted-foreground text-ellipsis whitespace-wrap overflow-hidden h-[25px]">
             {role}
           </p>
       </CardContent>
       <CardFooter className="flex flex-col gap-y-4 p-4 items-start  border border-gray-200 rounded-[12px] bg-gray-100">
-        <div className="flex flex-col gap-y-1 sm:flex-row w-full sm:items-center sm:justify-between px-1">
+        <div className="flex flex-col gap-y-1 sm:flex-row w-full sm:items-center lg:text-[0.7rem] sm:justify-between px-1">
         <div className="flex flex-col items-center justify-center">
             <p className={cn("text-[12px] font-regular",Font.className)}>Department</p>
-            <p className="text-ellipsis whitespace-nowrap overflow-x-hidden sm:w-fit lg:max-w-[150px] ">{role}</p>
+            <p className="text-ellipsis whitespace-nowrap overflow-x-hidden sm:w-fit max-w-[150px] ">{role}</p>
         </div>
         <div className="flex flex-col items-center justify-center">
             <p className={cn("text-[12px] font-regular",Font.className)}>Date Hired</p>
             <p className="text-ellipsis whitespace-wrap overflow-x-hidden">{dateHired}</p>
         </div>
         </div>
-        <div className="space-y-1">
+        <div className="space-y-1 lg:text-[0.9rem]">
         <div className="flex flex-row gap-x-2 items-center justify-start">
             <Image src={'/email.png'} width={20} height={20} alt="email" />
             <p className="text-ellipsis whitespace-wrap overflow-x-hidden w-[230px]">{email}</p>

@@ -41,7 +41,7 @@ const Employees = () => {
           >
             Employees
           </h1>
-          <p className="text-muted-foreground sm:w-[40px]">{`( ${"7"} )`}</p>
+          <p className="text-muted-foreground sm:w-[40px]">{`( ${employees.length} )`}</p>
         </div>
         <div className="flex flex-row gap-x-4 w-full">
           <Input
@@ -84,7 +84,7 @@ const Employees = () => {
           Add Employees
         </Button>
       </div>
-      <div className="flex flex-wrap gap-3 items-start justify-start sm:grid grid-flow-row sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+      <div className="flex flex-wrap gap-3 items-start justify-start sm:grid grid-flow-row sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
         {employees.map((emp) => {
             return (
                 <EmployeeCard {...emp} key={emp.employeeID} />
